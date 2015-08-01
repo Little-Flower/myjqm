@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.mobile.changePage("eg03.html",{transition:"slideup"});   //页面跳转
+
+			$.mobile.loadPage("eg02.html");   //实现加载指定页面  类似于data-prefetch="true"
+
+		})
+	</script>
+	<title></title>
+</head>
+<body>
+	<div data-role="page" data-dom-cache="true">
+		<div data-role="header">
+			<h1>天气预报</h1>
+		</div>
+		<div data-role="content">
+			<p><a data-transition="none" rel="external" data-prefetch="true" href="eg02.html">今天</a> | 
+				<a data-transition="none" href="#page03">明天</a>|
+				<a href="diag.html" data-rel="dialog" data-transition="pop" rel="external">弹框 </a>|
+				<a href="diag.html" data-rel="dialog" data-transition="pop" rel="external">关闭 </a>
+			</p>
+		</div>
+		<div data-role="footer">
+			<h4>@2012 rttop</h4>
+		</div>
+	</div>
+
+	<div id="page02" data-role="page" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>天气预报</h1>
+		</div>
+		<div data-role="content">
+			<p>4~7度  微风</p>
+		</div>
+		<div data-role="footer">
+			<h4>@2012 rttop</h4>
+		</div>
+	</div>
+
+	<div id="page03" data-role="page" data-add-back-btn="true">
+		<div data-role="header">
+			<h1>天气预报</h1>
+		</div>
+		<div data-role="content">
+			<p>4~7度  微风</p>
+		</div>
+		<div data-role="footer">
+			<h4>@2013 rttop</h4>
+		</div>
+	</div>
+</body>
+</html>
